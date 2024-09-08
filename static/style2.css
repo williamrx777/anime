@@ -1,0 +1,23 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    background-image: url(https://wp.radiojhero.com/wp-content/uploads/2022/02/shurato-3-scaled.jpg);
+}
+
+
+
+btn {
+    font-family: sans-serif;
+    font-size:18px;
+    color: rgb(0, 140, 255);
+}
+

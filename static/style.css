@@ -1,0 +1,24 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body {
+    background-image: url(https://1.bp.blogspot.com/-X5Jin0sO_FY/YFTKPdurtSI/AAAAAAAABrI/3rS-DoVUMbYClM9N7GfdIE2g6SMuGBF9ACLcBGAsYHQ/s1920/samuraiwarriors.jpg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 90%;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.btn {
+    font-family: sans-serif;
+    font-size:18px;
+}
+

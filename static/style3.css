@@ -1,0 +1,23 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    background-image: url(https://images7.alphacoders.com/756/thumb-1920-756229.jpeg);
+}
+
+
+
+btn {
+    font-family: sans-serif;
+    font-size:18px;
+    color: rgb(0, 140, 255);
+}
+
