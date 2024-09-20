@@ -47,7 +47,6 @@ def shurato(id):
         api="https://anime-62323-default-rtdb.firebaseio.com/"
         dados = requests.get(f'{api}/Shurato/-NTfDXKejGqQ-6CJYw3r/{id}.json')
         res=dados.json()
-        nome = res['nome']
         url = res['url']
         print(dados)
         print(dados.json())
@@ -55,7 +54,7 @@ def shurato(id):
             raise Exception('Não existe epísodio')
     except:
         return 'Episodio não existe'
-    return render_template('shurato.html',res=res,id=id,url=url,nome=nome)
+    return render_template('shurato.html',res=res,id=id,url=url)
 @app.route('/Shurato/buscar', methods=['GET','POST'])
 def reishura():
     try:
