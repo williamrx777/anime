@@ -59,20 +59,17 @@ def shurato(id):
 @app.route('/Shurato/buscar', methods=['GET','POST'])
 def reishura():
     try:
-        api = Shurato(request.form['id'],['nome'],['url'])
+        api = Shurato(request.form['id'],['url'])
         res = json.loads(requests.get(f'https://anime-62323-default-rtdb.firebaseio.com/Shurato/-NTfDXKejGqQ-6CJYw3r/{api.id}.json').text)
         id=res['id']
-        nome=res['nome']
         url=res['url']
         api.id=id
-        api.nome=nome
         api.url=url
     except Exception as ex:
         print(ex)
         return 'Episodio não existe'
     return render_template('shurato.html',
                            id=api.id,
-                           nome=api.nome,
                            url=api.url
                            )
 
