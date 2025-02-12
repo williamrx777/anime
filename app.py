@@ -5,7 +5,7 @@ import json
 
 app = Flask(__name__)
 
-@app.route('/Samurai-Warriors/<int:id>')
+@app.route('/samurai-warriors/<int:id>')
 def index(id):
     try:
         id
@@ -21,7 +21,7 @@ def index(id):
     except:
         return 'Episodio não existe'
     return render_template('index.html',res=res,id=id,anime=anime,nome=nome)
-@app.route('/Samurai-Warriors/buscar', methods=['GET','POST'])
+@app.route('/samurai-warriors/buscar', methods=['GET','POST'])
 def buscar():
     try:
         api = SamuraiWarriors(request.form['id'],['nome'],['anime'])
@@ -40,7 +40,7 @@ def buscar():
                            nome=api.nome,
                            anime=api.anime
                            )
-@app.route('/Shurato/<int:id>')
+@app.route('/shurato/<int:id>')
 def shurato(id):
     try:
         id
@@ -55,7 +55,7 @@ def shurato(id):
     except:
         return 'Episodio não existe'
     return render_template('shurato.html',res=res,id=id,url=url)
-@app.route('/Shurato/buscar', methods=['GET','POST'])
+@app.route('/shurato/buscar', methods=['GET','POST'])
 def reishura():
     try:
         api = Shurato(request.form['id'],['url'])
@@ -72,7 +72,7 @@ def reishura():
                            url=api.url
                            )
 
-@app.route('/Yuyuhakusho/<int:id>')
+@app.route('/yuyuhakusho/<int:id>')
 def yuyuhakusho(id):
     try:
         id
@@ -88,7 +88,7 @@ def yuyuhakusho(id):
         return 'Episodio não existe'
     return render_template('yuyuhakusho.html',res=res,id=id,url=url)
 
-@app.route('/Yuyuhakusho/buscar', methods=['GET','POST'])
+@app.route('/yuyuhakusho/buscar', methods=['GET','POST'])
 def yusuki():
     try:
         api = Yuyuhakusho(request.form['id'],['url'])
@@ -105,7 +105,7 @@ def yusuki():
                            url=api.url
                            )
 
-@app.route('/Cdz/<int:id>')
+@app.route('/cdz/<int:id>')
 def cdz(id):
     try:
         id
@@ -121,7 +121,7 @@ def cdz(id):
                            id=id,
                            res=res,
                            url=url)
-@app.route('/Cdz/buscar', methods=["GET","POST"])
+@app.route('/cdz/buscar', methods=["GET","POST"])
 def ocdz():
     try:
         api = Cdz(request.form['id'],['nome'],['url'])
