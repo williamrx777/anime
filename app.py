@@ -109,7 +109,7 @@ def yusuki():
 def cdz(id):
     try:
         id
-        api=requests.get(f'https://anime-62323-default-rtdb.firebaseio.com/Cdz/Episodio/{id}.json')
+        api=requests.get(f'https://anime-62323-default-rtdb.firebaseio.com/Cdz/-O7tz218SRTMUbEvZfck/{id}.json')
         res=api.json()
         url=res['url']
         if id > 145:
@@ -125,7 +125,7 @@ def cdz(id):
 def ocdz():
     try:
         api = Cdz(request.form['id'],['nome'],['url'])
-        dados = json.loads(requests.get(f'https://anime-62323-default-rtdb.firebaseio.com/Cdz/Episodio/{api.id}.json').text)
+        dados = json.loads(requests.get(f'https://anime-62323-default-rtdb.firebaseio.com/Cdz/-O7tz218SRTMUbEvZfck/{api.id}.json').text)
         id=dados['id']
         url=dados['url']
         api.id=id
